@@ -1,0 +1,3 @@
+C:/Users/paolo/Documents/Taller2EDD/cmake-build-debug/CMakeFiles/Taller2EDD.dir
+C:/Users/paolo/Documents/Taller2EDD/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/paolo/Documents/Taller2EDD/cmake-build-debug/CMakeFiles/rebuild_cache.dir
