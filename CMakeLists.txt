@@ -7,4 +7,6 @@ add_executable(Taller2EDD main.cpp
         Asistente.cpp
         Asistente.h
         ABB.h
-        ABB.cpp)
+        ABB.cpp
+        ArbolEnhebrado.cpp
+        ArbolEnhebrado.h)

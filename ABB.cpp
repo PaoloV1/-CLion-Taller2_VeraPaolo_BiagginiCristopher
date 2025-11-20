@@ -109,6 +109,7 @@ void ABB::inOrdenRec(NodoABB *nodo) {
 }
 
 /**
+ * @author Paolo Vera
  * Metodo Recursivo para eliminar el arbol
  * @param nodo
  */
