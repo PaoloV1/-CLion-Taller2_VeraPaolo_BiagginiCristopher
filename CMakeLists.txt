@@ -13,4 +13,5 @@ add_executable(Taller2EDD main.cpp
         Sistema.cpp
         Sistema.h
         Ticket.cpp
-        Ticket.h)
+        Ticket.h
+        Cola.h)

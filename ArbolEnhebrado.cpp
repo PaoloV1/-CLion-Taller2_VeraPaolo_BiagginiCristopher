@@ -135,7 +135,7 @@ void ArbolEnhebrado::mostrarInOrden() {
         actual = actual->hijoIzq;
     }
     // Mostramos por pantalla los datos si el asiento esta ocupado o no
-    while (actual != nullptr) {
+    while (actual) {
         cout <<"Asiento" << actual->asiento;
         cout << "- " << (actual->ocupado ? "Ocupado" : "Libre") << endl;
 
@@ -143,7 +143,7 @@ void ArbolEnhebrado::mostrarInOrden() {
             actual = actual->hijoDer;
         } else {
             actual = actual->hijoDer;
-            while (actual != nullptr && !actual->hebraIzq) actual = actual->hijoIzq;
+            while (actual && !actual->hebraIzq) actual = actual->hijoIzq;
         }
     }
 }
@@ -152,29 +152,28 @@ void ArbolEnhebrado::mostrarInOrden() {
  * @author Paolo Vera
  * Metodo para eliminar los nodos del Arbol Enhebrado, sera utilizado en el destructor para liberar la memoria
  */
+
 void ArbolEnhebrado::destruir() {
+    if (!raiz) return;
+
     NodoEnhebrado* actual = raiz;
-    while (actual && !actual->hebraIzq) {
+    while (!actual->hebraIzq) {
         actual = actual->hijoIzq;
     }
-    while (actual != nullptr) {
-        NodoEnhebrado* siguiente;
 
-        if (actual->hebraDer) {
-            siguiente = actual->hijoDer;
-        } else {
+    while (actual!= nullptr) {
+        NodoEnhebrado* siguiente;
+        if (actual->hebraDer) siguiente = actual->hijoDer;
+        else {
             siguiente = actual->hijoDer;
             while (siguiente && !siguiente->hebraIzq) {
                 siguiente = siguiente->hijoIzq;
             }
-            delete actual;
-            actual = siguiente;
-
         }
-        raiz = nullptr;
-
+        delete actual;
+        actual = siguiente;
     }
-
+    raiz = nullptr;
 }
 
 

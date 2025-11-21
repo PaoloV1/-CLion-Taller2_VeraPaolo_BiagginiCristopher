@@ -25,11 +25,13 @@ class ArbolEnhebrado {
 private:
     NodoEnhebrado* raiz;
 
-    void insertarNodo(int numero);
+
 
 public:
     ArbolEnhebrado();
     ~ArbolEnhebrado();
+
+    void insertarNodo(int numero);
 
     void construirAsientos(int x, int y);
 

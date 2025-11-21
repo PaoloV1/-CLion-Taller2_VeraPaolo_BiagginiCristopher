@@ -36,7 +36,7 @@ void ABB::insertar(Ticket* t) {
  * @author Paolo Vera
  * Metodo recursivo y privado para la insercion de datos en el ABB
  * @param nodo
- * @param asistente
+ * @param ticket
  * @return Nodo que se inserto dentro del ABB
  */
 NodoABB *ABB::insertarRec(NodoABB *nodo, Ticket* ticket) {
