@@ -1,11 +1,6 @@
-//
-// Created by Paolo on 21-11-2025.
-//
-
 #include "Ticket.h"
 
 /**
- * @author Paolo Vera
  * Constructor Ticket
  * @param idTicket
  * @param asiento
@@ -19,7 +14,6 @@ Ticket::Ticket(int idTicket, int asiento, bool vip) {
 }
 
 /**
- * @author Paolo Vera
  * Getter Id del ticket
  * @return Id del ticket
  */
@@ -28,7 +22,6 @@ int Ticket::getIdTicket() {
 }
 
 /**
- * @author Paolo Vera
  * Getter Id del ticket
  * @return Numero de asiento
  */
@@ -37,7 +30,6 @@ int Ticket::getAsiento() {
 }
 
 /**
- * @author Paolo Vera
  * Getter VIP
  * @return true si es VIP, false si no lo es
  */
@@ -46,7 +38,6 @@ bool Ticket::isVip() {
 }
 
 /**
- * @author Paolo Vera
  * Getter Usado
  * @return true si el asiento esta usado, false si no lo esta
  */
@@ -55,7 +46,6 @@ bool Ticket::isUsado() {
 }
 
 /**
- * @author Paolo Vera
  * Metodo para cambiar el estado de la variable usado
  */
 void Ticket::marcarUsado() {

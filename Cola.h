@@ -1,7 +1,3 @@
-//
-// Created by Paolo on 21-11-2025.
-//
-
 #ifndef COLA_H
 #define COLA_H
 
@@ -39,7 +35,7 @@ public:
         }
     }
     T desencolar() {
-        if (estaVacia()) return nullptr
+        if (estaVacia()) return nullptr;
 
         NodoCola<T>* temp = frente;
         T dato = temp->dato;

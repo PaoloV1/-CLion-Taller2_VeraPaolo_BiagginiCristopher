@@ -1,13 +1,8 @@
-//
-// Created by Paolo on 20-11-2025.
-//
-
 #include "ArbolEnhebrado.h"
 
 #include <iostream>
 
 /**
- * @author Paolo Vera
  * Metodo constructor Arbol Enhebrado
  */
 ArbolEnhebrado::ArbolEnhebrado() {
@@ -15,7 +10,6 @@ ArbolEnhebrado::ArbolEnhebrado() {
 }
 
 /**
- * @author Paolo vera
  * Metodo destructor Arbol Enhebrado
  */
 ArbolEnhebrado::~ArbolEnhebrado() {
@@ -23,7 +17,6 @@ ArbolEnhebrado::~ArbolEnhebrado() {
 }
 
 /**
- * @author Paolo Vera
  * Metodo para insertar un nodo dentro del Arbol Enhebrado
  * @param numero de entrada
  */
@@ -90,7 +83,6 @@ void ArbolEnhebrado::construirAsientos(int x, int y) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo para asignar un asiento a un asistente
  * @param numero de asiento
  * @param a asistente
@@ -121,7 +113,6 @@ bool ArbolEnhebrado::asignarAsiento(int numero, Asistente *a) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo para recorrer el arbol enhebrado in Orden usando hebras
  */
 void ArbolEnhebrado::mostrarInOrden() {
@@ -149,7 +140,6 @@ void ArbolEnhebrado::mostrarInOrden() {
 }
 
 /**
- * @author Paolo Vera
  * Metodo para eliminar los nodos del Arbol Enhebrado, sera utilizado en el destructor para liberar la memoria
  */
 

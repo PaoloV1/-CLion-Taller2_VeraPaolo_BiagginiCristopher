@@ -1,13 +1,9 @@
-//
-// Created by Paolo on 19-11-2025.
-//
 #include "ABB.h"
 #include <iostream>
 
 using namespace std;
 
 /**
- * @author Paolo Vera
  * Constructor ABB
  */
 ABB::ABB() {
@@ -15,7 +11,6 @@ ABB::ABB() {
 }
 
 /**
- * @author Paolo Vera
  * Destructor ABB
  */
 ABB::~ABB() {
@@ -24,7 +19,6 @@ ABB::~ABB() {
 }
 
 /**
- * @author Paolo Vera
  * Metodo publico para la insercion de datos en el ABB
  * @param t Ticket que se va a ingresar al arbol
  */
@@ -33,7 +27,6 @@ void ABB::insertar(Ticket* t) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo recursivo y privado para la insercion de datos en el ABB
  * @param nodo
  * @param ticket
@@ -55,7 +48,6 @@ NodoABB *ABB::insertarRec(NodoABB *nodo, Ticket* ticket) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo publico para buscar dentro del ABB
  * @param id
  * @return Metodo recursivo para buscar dentro del arbol
@@ -65,7 +57,6 @@ Ticket *ABB::buscar(int id) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo recursivo y privado para buscar un dato dentro del ABB
  * @param nodo
  * @param id
@@ -88,7 +79,6 @@ Ticket *ABB::buscarRec(NodoABB *nodo, int id) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo publico para imprimir el arbol In Orden
  */
 void ABB::inOrden() {
@@ -96,7 +86,6 @@ void ABB::inOrden() {
 }
 
 /**
- * @author Paolo Vera
  * Metodo privado y recursivo para imprimir el arbol In Orden
  * @param nodo
  */
@@ -109,7 +98,6 @@ void ABB::inOrdenRec(NodoABB *nodo) {
 }
 
 /**
- * @author Paolo Vera
  * Metodo Recursivo para eliminar el arbol
  * @param nodo
  */

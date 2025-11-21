@@ -1,7 +1,3 @@
-//
-// Created by Paolo on 20-11-2025.
-//
-
 #ifndef ARBOLENHEBRADO_H
 #define ARBOLENHEBRADO_H
 #include "Asistente.h"

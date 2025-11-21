@@ -1,7 +1,3 @@
-//
-// Created by Paolo on 21-11-2025.
-//
-
 #ifndef SISTEMA_H
 #define SISTEMA_H
 #include <vector>
@@ -22,7 +18,7 @@ private:
     Cola<Asistente*> colaMerch;
     int comprasInPuerta = 0;
     int sinComprar = 0;
-    int merch = 100;
+    int merch = 500;
 
 public:
     Sistema();
@@ -31,7 +27,6 @@ public:
     void inicializarAsientos(int cantidad);
 
     void procesarIngreso();
-    bool validarEntrada(Asistente* a);
 
     void mostrarAsientos();
     void mostrarResumen();

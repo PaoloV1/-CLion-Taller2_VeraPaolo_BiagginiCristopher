@@ -1,15 +1,17 @@
-//
-// Created by Paolo on 21-11-2025.
-//
-
 #include "Sistema.h"
 
 #include <fstream>
 #include <iostream>
 #include <sstream>
-
+/**
+ * Metodo constructor clase Sistema
+ */
 Sistema::Sistema() {}
 
+/**
+ * Metodo para cargar los Asistentes del archivo a la Cola de ingreso y al ABB
+ * @param nombreArchivo
+ */
 void Sistema::cargarAsistentes(string nombreArchivo) {
     ifstream archivo(nombreArchivo);
     if (!archivo.is_open()) return;
@@ -29,48 +31,36 @@ void Sistema::cargarAsistentes(string nombreArchivo) {
         getline(ss, sVip);
 
         int id = stoi(sId);
-        int asiento = stoi(sAsiento);
+        int asiento = -1;
+        if (!sAsiento.empty()) asiento = stoi(sAsiento);
         bool vip = (sVip == "si");
         bool tieneEntrada = (sEntrada == "si");
 
-        Asistente* a = new Asistente(id, nombre, tieneEntrada, asiento, vip);
+        Asistente* a = new Asistente(id, nombre, false, asiento, vip);
         a->setVip(vip);
 
         colaIngreso.encolar(a);
+        if (tieneEntrada) {
+            Ticket* t = new Ticket(id, asiento, vip);
+            abbTickets.insertar(t);
+        }
 
-        Ticket* t = new Ticket(id, asiento, vip);
-        abbTickets.insertar(t);
     }
     archivo.close();
 }
+
+/**
+ * Metodo para inicializar los asientos del concierto
+ * @param cantidad
+ */
 void Sistema::inicializarAsientos(int cantidad) {
     arbolAsientos.construirAsientos(1,cantidad);
 }
 
 
-bool Sistema::validarEntrada(Asistente *a) {
-    if (a == nullptr) {
-        cout << "Asistente invalido"<<endl;
-        return false;
-    }
-
-    int id= a->getId();
-    Ticket* t = abbTickets.buscar(id);
-
-    if (t == nullptr) {
-        cout << "El ticket no existe en el sistema"<<endl;
-        return false;
-    }
-    if (t->isUsado()) {
-        cout << "Este ticket ya fue utilizado"<<endl;
-        return false;
-    }
-
-    t->marcarUsado();
-    cout <<"Entrada Valida"<<endl;
-    return true;
-}
-
+/**
+ * Metodo para procesar el ingreso de las personas que estan en la cola de ingreso
+ */
 void Sistema::procesarIngreso() {
     cout << "PROCESANDO INGRESO..."<<endl;
     cout << "..............."<<endl;
@@ -83,12 +73,10 @@ void Sistema::procesarIngreso() {
         Ticket* t = abbTickets.buscar(a->getId());
 
         if (t == nullptr) {
-            cout << "Ticket invalido"<<endl;
             rechazados.push_back(a);
             continue;
         }
         if (t->isUsado()) {
-            cout << "Este ticket ya fue utilizado"<<endl;
             rechazados.push_back(a);
             continue;
         }
@@ -109,9 +97,16 @@ void Sistema::procesarIngreso() {
     cout << "Todos los asistentes han sido procesados"<<endl;
 }
 
+/**
+ * Metodo para mostrar los asientos del concierto
+ */
 void Sistema::mostrarAsientos() {
     arbolAsientos.mostrarInOrden();
 }
+
+/**
+ * Metodo para mostrar el Resumen al final del concierto
+ */
 void Sistema::mostrarResumen() {
     cout << "RESUMEN DEL CONCIERTO"<<endl;
 
@@ -128,8 +123,13 @@ void Sistema::mostrarResumen() {
             cout << a->getId()<< " - " << a->getNombre() << endl;
         }
     cout <<"COMPRAS EN PUERTA: "<<comprasInPuerta<<endl;
+
+    cout << "CANTIDAD DE PERSONAS QUE NO PUDIERON COMPRAR: "<<sinComprar<<endl;
 }
 
+/**
+ * Metodo para determinar que asistentes del concierto quieren comprar merch y quienes no
+ */
 void Sistema::determinarMerch() {
     for (auto a :ingresados) {
         if ((rand() % 100)< 60) {
@@ -138,6 +138,9 @@ void Sistema::determinarMerch() {
     }
 }
 
+/**
+ * Metodo para que cada persona que esta en la cola de merchandising compre un producto
+ */
 void Sistema::merchandising() {
     cout << "MERCHANDISING"<<endl;
 

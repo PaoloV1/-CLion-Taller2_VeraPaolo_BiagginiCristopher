@@ -85,8 +85,8 @@ build CMakeFiles/Taller2EDD.dir/Ticket.cpp.obj: CXX_COMPILER__Taller2EDD_unscann
   OBJECT_DIR = CMakeFiles\Taller2EDD.dir
   OBJECT_FILE_DIR = CMakeFiles\Taller2EDD.dir
 
-build CMakeFiles/Taller2EDD.dir/Cola.cpp.obj: CXX_COMPILER__Taller2EDD_unscanned_Debug C$:/Users/paolo/Documents/Taller2EDD/Cola.cpp || cmake_object_order_depends_target_Taller2EDD
-  DEP_FILE = CMakeFiles\Taller2EDD.dir\Cola.cpp.obj.d
+build CMakeFiles/Taller2EDD.dir/Interfaz.cpp.obj: CXX_COMPILER__Taller2EDD_unscanned_Debug C$:/Users/paolo/Documents/Taller2EDD/Interfaz.cpp || cmake_object_order_depends_target_Taller2EDD
+  DEP_FILE = CMakeFiles\Taller2EDD.dir\Interfaz.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Taller2EDD.dir
   OBJECT_FILE_DIR = CMakeFiles\Taller2EDD.dir
@@ -99,7 +99,7 @@ build CMakeFiles/Taller2EDD.dir/Cola.cpp.obj: CXX_COMPILER__Taller2EDD_unscanned
 #############################################
 # Link the executable Taller2EDD.exe
 
-build Taller2EDD.exe: CXX_EXECUTABLE_LINKER__Taller2EDD_Debug CMakeFiles/Taller2EDD.dir/main.cpp.obj CMakeFiles/Taller2EDD.dir/Asistente.cpp.obj CMakeFiles/Taller2EDD.dir/ABB.cpp.obj CMakeFiles/Taller2EDD.dir/ArbolEnhebrado.cpp.obj CMakeFiles/Taller2EDD.dir/Sistema.cpp.obj CMakeFiles/Taller2EDD.dir/Ticket.cpp.obj CMakeFiles/Taller2EDD.dir/Cola.cpp.obj
+build Taller2EDD.exe: CXX_EXECUTABLE_LINKER__Taller2EDD_Debug CMakeFiles/Taller2EDD.dir/main.cpp.obj CMakeFiles/Taller2EDD.dir/Asistente.cpp.obj CMakeFiles/Taller2EDD.dir/ABB.cpp.obj CMakeFiles/Taller2EDD.dir/ArbolEnhebrado.cpp.obj CMakeFiles/Taller2EDD.dir/Sistema.cpp.obj CMakeFiles/Taller2EDD.dir/Ticket.cpp.obj CMakeFiles/Taller2EDD.dir/Interfaz.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Taller2EDD.dir

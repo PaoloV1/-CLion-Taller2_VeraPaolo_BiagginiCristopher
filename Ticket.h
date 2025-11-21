@@ -1,7 +1,3 @@
-//
-// Created by Paolo on 21-11-2025.
-//
-
 #ifndef TICKET_H
 #define TICKET_H
 #include <string>

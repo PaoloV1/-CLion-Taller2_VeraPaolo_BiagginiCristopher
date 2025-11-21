@@ -1,7 +1,3 @@
-//
-// Created by Paolo on 17-11-2025.
-//
-
 #ifndef ABB_H
 #define ABB_H
 
