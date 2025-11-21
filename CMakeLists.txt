@@ -9,4 +9,8 @@ add_executable(Taller2EDD main.cpp
         ABB.h
         ABB.cpp
         ArbolEnhebrado.cpp
-        ArbolEnhebrado.h)
+        ArbolEnhebrado.h
+        Sistema.cpp
+        Sistema.h
+        Ticket.cpp
+        Ticket.h)

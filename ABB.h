@@ -5,16 +5,16 @@
 #ifndef ABB_H
 #define ABB_H
 
-#include  "Asistente.h"
+#include  "Ticket.h"
 using namespace std;
 
 class NodoABB {
 public:
-    Asistente* dato;
+    Ticket* dato;
     NodoABB* hijoIzq;
     NodoABB* hijoDer;
 
-    NodoABB(Asistente* asistente) : dato(asistente), hijoIzq(nullptr), hijoDer(nullptr){}
+    NodoABB(Ticket* t) : dato(t), hijoIzq(nullptr), hijoDer(nullptr){}
 
 };
 
@@ -22,8 +22,8 @@ class ABB {
 private:
     NodoABB* raiz;
 
-    NodoABB* insertarRec(NodoABB* nodo, Asistente* asistente);
-    Asistente* buscarRec(NodoABB* nodo, int id);
+    NodoABB* insertarRec(NodoABB* nodo, Ticket* ticket);
+    Ticket* buscarRec(NodoABB* nodo, int id);
     void inOrdenRec(NodoABB* nodo);
     void liberarRec(NodoABB* nodo);
 
@@ -31,9 +31,9 @@ public:
     ABB();
     ~ABB();
 
-    void insertar(Asistente* asistente);
+    void insertar(Ticket* ticket);
 
-    Asistente *buscar(int id);
+    Ticket* buscar(int id);
     void inOrden();
 };
 

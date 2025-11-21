@@ -16,12 +16,13 @@ private:
     int asiento;
     bool vip;
 public:
-    Asistente(int id, string nombre, bool entrada, int asiento);
+    Asistente(int id, string nombre, bool entrada, int asiento, bool vip);
     int getId();
     string getNombre();
     bool getEntrada();
     int getAsiento();
     bool getVip();
+    void setVip(bool vip);
 };
 
 

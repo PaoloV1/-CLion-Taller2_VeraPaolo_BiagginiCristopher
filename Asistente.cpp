@@ -12,11 +12,12 @@
  * @param entrada
  * @param asiento
  */
-Asistente::Asistente(int id, string nombre, bool entrada, int asiento) {
+Asistente::Asistente(int id, string nombre, bool entrada, int asiento, bool vip) {
     this->id = id;
     this->nombre = nombre;
     this->entrada = entrada;
     this->asiento = asiento;
+    this->vip = vip;
 }
 
 /**
@@ -53,3 +54,12 @@ int Asistente::getAsiento() {return this->asiento;}
  * @return true si la persona es VIP, false si no lo es
  */
 bool Asistente::getVip() {return this->vip;}
+
+/**
+ * @author Paolo Vera
+ * Setter VIP
+ */
+void Asistente::setVip(bool vip) {
+    this->vip = vip;
+}
+

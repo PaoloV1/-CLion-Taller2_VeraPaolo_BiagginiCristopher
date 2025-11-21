@@ -33,7 +33,7 @@ public:
 
     void construirAsientos(int x, int y);
 
-    bool asiganrAsiento(int numero, Asistente* a);
+    bool asignarAsiento(int numero, Asistente* a);
 
     void mostrarInOrden();
 
